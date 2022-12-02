@@ -1,0 +1,133 @@
+html {
+  background-color: #f18787;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  background-image: radial-gradient(circle, #358a43, #ffff);
+  font-size: 4rem;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 3px white;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+h1 + p {
+  font-style: italic;
+  font-size: 2rem;
+  color: #4a7a5c;
+  text-shadow:
+    -1px 1px 2px #ffff,
+    1px 1px 2px #ffff,
+    1px -1px 0 #ffff,
+    -1px -1px 0 #ffff;
+  margin-top: 1rem;
+}
+
+.day {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1em;
+}
+
+.day:nth-child(even) {
+  color: #315b41;
+  background-color: #ffff;
+}
+
+.day:nth-child(odd) {
+  color: #ffff;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+button {
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 0 18px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-right: 2em;
+  height: 3em;
+}
+
+.day:nth-child(odd) button {
+  background-color: #315b41;
+  border: 2px solid #ffff;
+  box-shadow: #ffff 4px 4px 0 0;
+  color: #ffff;
+}
+
+.day:nth-child(odd) button:hover {
+  background-color: #65bd87;
+}
+
+.day:nth-child(odd) button:active {
+  box-shadow: #ffff 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+.day:nth-child(even) button {
+  background-color: #fdd8d8;
+  border: 2px solid #315b41;
+  box-shadow: #315b41 4px 4px 0 0;
+  color: #315b41;
+}
+
+.day:nth-child(even) button:hover {
+  background-color: #ffff;
+}
+
+.day:nth-child(even) button:active {
+  box-shadow: #315b41 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+.question {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 1rem;
+  min-height: 4rem;
+}
+
+p {
+  font-size: 1.25rem;
+}
