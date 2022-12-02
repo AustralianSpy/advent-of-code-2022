@@ -17,38 +17,23 @@ function parseInput(input) {
 }
 
 function totalCalories(input) {
-  return input.map(arr => arr.reduce((a,b) => a + b, 0));
+  return input.map(arr => arr.reduce((a,b) => a + b, 0)).sort((a, b) => b - a);
 }
 
 function PartOneCalculate(arr) {
-  let currentTotal = 0;
-  let currentElf = 0;
-
-  arr.forEach((elf, index) => {
-    if (elf > currentTotal) {
-      currentTotal = elf;
-      currentElf = index + 1;
-    }
-  })
-  return { currentTotal, currentElf }
+  return arr[0];
 }
 
 function PartTwoCalculate(arr) {
-  let result = [];
-  for (let i = 0; i < 3; i++) {
-    const current = PartOneCalculate(arr);
-    result.push(current.currentTotal);
-    arr.splice(current.currentElf - 1, 1);
-  }
-  return result.reduce((a,b) => a + b, 0);
+  return [arr[0], arr[1], arr[2]].reduce((a,b) => a + b, 0);
 }
 
 export function DayOnePartOne() {
   const arr = totalCalories(parseInput(INPUT));
-  const { currentElf, currentTotal } = PartOneCalculate(arr);
+  const result = PartOneCalculate(arr);
 
   const text = document.getElementById("1-p1-a");
-  (text.innerHTML === '') ? text.innerHTML = `Elf number ${currentElf} is carrying ${currentTotal} calories!` : text.innerHTML = '';
+  (text.innerHTML === '') ? text.innerHTML = `The top elf is carrying ${result} calories!` : text.innerHTML = '';
 }
 
 export function DayOnePartTwo() {

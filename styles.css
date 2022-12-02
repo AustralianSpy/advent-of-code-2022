@@ -77,7 +77,8 @@ button {
   -webkit-user-select: none;
   touch-action: manipulation;
   margin-right: 2em;
-  height: 3em;
+  min-height: 3em;
+  min-width: 120px;
 }
 
 .day:nth-child(odd) button {
@@ -112,20 +113,13 @@ button {
   transform: translate(2px, 2px);
 }
 
-@media (min-width: 768px) {
-  .button {
-    min-width: 120px;
-    padding: 0 25px;
-  }
-}
-
 .question {
   display: flex;
   width: 100%;
   justify-content: start;
   align-items: center;
   margin-bottom: 1rem;
-  min-height: 4rem;
+  min-height: 5rem;
 }
 
 p {
