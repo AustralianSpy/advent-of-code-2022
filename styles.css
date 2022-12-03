@@ -1,5 +1,5 @@
 html {
-  background-color: #f18787;
+  background-color: #93E1D8;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   width: 100vw;
   height: 100vh;
@@ -22,12 +22,11 @@ header {
 }
 
 h1 {
-  background-image: radial-gradient(circle, #358a43, #ffff);
+  background-image: radial-gradient(circle, #861657, #FFA69E);
   font-size: 4rem;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-stroke: 3px white;
   margin-bottom: 0;
   text-transform: uppercase;
 }
@@ -35,7 +34,7 @@ h1 {
 h1 + p {
   font-style: italic;
   font-size: 2rem;
-  color: #4a7a5c;
+  color: #AA4465;
   text-shadow:
     -1px 1px 2px #ffff,
     1px 1px 2px #ffff,
@@ -48,10 +47,12 @@ h1 + p {
   box-sizing: border-box;
   width: 100%;
   padding: 1em;
+  display: flex;
+  flex-direction: column;
 }
 
 .day:nth-child(even) {
-  color: #315b41;
+  color: #AA4465;
   background-color: #ffff;
 }
 
@@ -82,14 +83,14 @@ button {
 }
 
 .day:nth-child(odd) button {
-  background-color: #315b41;
+  background-color: #AA4465;
   border: 2px solid #ffff;
   box-shadow: #ffff 4px 4px 0 0;
   color: #ffff;
 }
 
 .day:nth-child(odd) button:hover {
-  background-color: #65bd87;
+  background-color: #FFA69E;
 }
 
 .day:nth-child(odd) button:active {
@@ -98,10 +99,10 @@ button {
 }
 
 .day:nth-child(even) button {
-  background-color: #fdd8d8;
-  border: 2px solid #315b41;
-  box-shadow: #315b41 4px 4px 0 0;
-  color: #315b41;
+  background-color: #DDFFF7;
+  border: 2px solid #AA4465;
+  box-shadow: #AA4465 4px 4px 0 0;
+  color: #AA4465;
 }
 
 .day:nth-child(even) button:hover {
@@ -109,7 +110,7 @@ button {
 }
 
 .day:nth-child(even) button:active {
-  box-shadow: #315b41 2px 2px 0 0;
+  box-shadow: #AA4465 2px 2px 0 0;
   transform: translate(2px, 2px);
 }
 
