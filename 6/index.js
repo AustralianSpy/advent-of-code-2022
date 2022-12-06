@@ -6,15 +6,7 @@ function parseInput(input) {
 }
 
 function checkDuplication(size, sequence) {
-  let hasDuplicates = false;
-  for (let i = 0; i < size; i++){
-    const char = sequence[i];
-    if (sequence.slice(i + 1).includes(char)) {
-      hasDuplicates = true;
-      break;
-    } 
-  }
-  return hasDuplicates;
+  return (new Set(sequence).size !== size);
 }
 
 function findStart(size, sequence) {
@@ -38,16 +30,12 @@ function findStart(size, sequence) {
 }
 
 function PartOneCalculate(input) {
-  const parsed = parseInput(input);
-  const result = findStart(4, parsed);
-  return result;
+  return findStart(4, parseInput(input));
 }
 
 function PartTwoCalculate(input) {
-  const parsed = parseInput(input);
-  const signal = findStart(4, parsed);
-  const result = findStart(14, parsed.slice(signal));
-  return signal + result;
+  const signal = findStart(4, parseInput(input));
+  return signal + findStart(14, parseInput(input).slice(signal));
 }
 
 export function DaySixPartOne() {
@@ -61,5 +49,5 @@ export function DaySixPartTwo() {
   const result = PartTwoCalculate(INPUT);
   
   const text = document.getElementById("6-p2-a");
-  (text.innerHTML === '') ? text.innerHTML = `The message starts at character: ${result}` : text.innerHTML = '';
+  (text.innerHTML === '') ? text.innerHTML = `The message starts at character: ${result}!` : text.innerHTML = '';
 }
