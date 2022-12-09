@@ -5,6 +5,7 @@ import { DayFourPartOne, DayFourPartTwo } from './4/index.js';
 import { DayFivePartOne, DayFivePartTwo } from './5/index.js';
 import { DaySixPartOne, DaySixPartTwo } from './6/index.js';
 import { DaySevenPartOne, DaySevenPartTwo } from './7/index.js';
+import { DayEightPartOne, DayEightPartTwo } from './8/index.js';
 
 document.getElementById("1-p1").addEventListener("click", DayOnePartOne)
 document.getElementById("1-p2").addEventListener("click", DayOnePartTwo)
@@ -26,3 +27,6 @@ document.getElementById("6-p2").addEventListener("click", DaySixPartTwo)
 
 document.getElementById("7-p1").addEventListener("click", DaySevenPartOne)
 document.getElementById("7-p2").addEventListener("click", DaySevenPartTwo)
+
+document.getElementById("8-p1").addEventListener("click", DayEightPartOne)
+document.getElementById("8-p2").addEventListener("click", DayEightPartTwo)
