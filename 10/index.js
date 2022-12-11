@@ -1,5 +1,4 @@
 import { INPUT, TEST } from './input.js'
-import Queue from '../lib/queue.js'
 
 function parseInput(input) {
   return input.split('\n')
