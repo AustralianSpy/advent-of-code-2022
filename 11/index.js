@@ -7,7 +7,8 @@ import { INPUT, TEST } from './input.js'
   *   operation: [operand, num],
   *   test: num,
   *   true: num,
-  *   false: num
+  *   false: num,
+  *   count: num,
   * }
 */
 
@@ -68,7 +69,7 @@ function checkWorryLevel(item, num) {
   return item % num === 0;
 }
 
-function playKeepAway(monkeys, rounds, worrying) {
+function playKeepAway(monkeys, rounds, relieved) {
   let divisor = monkeys.reduce((acc, monkey) => acc * monkey.test, 1);
 
   for (let x = 1; x <= rounds; x++) {
@@ -83,8 +84,8 @@ function playKeepAway(monkeys, rounds, worrying) {
         let item = monkey.items[0];
         item = doOperations(monkey.operation[0], item, monkey.operation[1]);
 
-        if (worrying) item = Math.floor(item / 3);
-        if (!worrying) item %= divisor;
+        if (relieved) item = Math.floor(item / 3);
+        if (!relieved) item %= divisor;
 
         const bool = checkWorryLevel(item, monkey.test);
         monkey.items = monkey.items.slice(1);
