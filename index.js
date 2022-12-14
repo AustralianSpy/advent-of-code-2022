@@ -1,6 +1,8 @@
 import { DayOnePartOne, DayOnePartTwo } from './1/index.js';
 import { DayTenPartOne, DayTenPartTwo } from './10/index.js';
 import { DayElevenPartOne, DayElevenPartTwo } from './11/index.js';
+import { DayTwelvePartOne, DayTwelvePartTwo } from './12/index.js';
+import { DayThirteenPartOne, DayThirteenPartTwo } from './13/index.js';
 import { DayTwoPartOne, DayTwoPartTwo } from './2/index.js';
 import { DayThreePartOne, DayThreePartTwo } from './3/index.js';
 import { DayFourPartOne, DayFourPartTwo } from './4/index.js';
@@ -42,3 +44,9 @@ document.getElementById("10-p2").addEventListener("click", DayTenPartTwo)
 
 document.getElementById("11-p1").addEventListener("click", DayElevenPartOne)
 document.getElementById("11-p2").addEventListener("click", DayElevenPartTwo)
+
+document.getElementById("12-p1").addEventListener("click", DayTwelvePartOne)
+document.getElementById("12-p2").addEventListener("click", DayTwelvePartTwo)
+
+document.getElementById("13-p1").addEventListener("click", DayThirteenPartOne)
+document.getElementById("13-p2").addEventListener("click", DayThirteenPartTwo)
